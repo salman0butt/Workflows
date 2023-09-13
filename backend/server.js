@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+require('dotenv').config();
 const cors = require("cors");
 const errorHandler = require("./middleware/errorHandler");
 const workflowRoutes = require("./routes/workflowRoutes");
@@ -12,7 +13,7 @@ const port = process.env.PORT || 3001;
 async function DbConnect() {
    try {
       // Connect to MongoDB
-        await mongoose.connect("mongodb://127.0.0.1:27017/workflows", {
+        await mongoose.connect(process.env.DB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         });
@@ -37,6 +38,12 @@ const corsOptions = {
 // Middleware
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
+// Use the error handler middleware
+app.use(errorHandler);
+
+// Use Workflow routes
+app.use("/api", workflowRoutes);
+app.use("/api", nodeRoutes);
 
 // Start the server
 app.listen(port, () => {
