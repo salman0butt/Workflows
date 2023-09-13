@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import WorkFlowManager from "./pages/WorkFlowManager"; // Import your Workflow component
+import WorkFlowManager from "./pages/WorkFlowManager";
 import WorkFlowBuilder from "./pages/WorkFlowBuilder";
 import WorkFlowPage from "./pages/WorkFlowPage";
 import Header from "./components/Header";
