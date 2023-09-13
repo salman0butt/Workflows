@@ -9,7 +9,7 @@ To run the app in a development environment, follow these steps:
 1. Clone the Git repository to your local machine:
 
    ```
-   git clone https://github.com/yourusername/workflow-app.git
+   git clone https://github.com/salman0butt/Workflows.git
    ```
 
 2. Navigate to the project directory:
