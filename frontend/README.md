@@ -41,7 +41,7 @@ To run the app in a development environment, follow these steps:
    npm run dev
    ```
 
-   The app will be available at `http://localhost:5173` in your web browser.
+   The app will be available at `http://localhost:5173` in your web browser. 
 
 1. Navigate to backend directory:
    ```
@@ -63,16 +63,25 @@ To deploy the app to a production environment, use the following steps:
    ```
 
 2. Set the necessary environment variables for production, including API keys database configurations.
-
+ .env should have this DB_URL variable to define the local or remote database
 3. Deploy the app to your chosen hosting platform, such as Heroku, Netlify, or AWS. Refer to the hosting platform's documentation for specific deployment instructions.
 
+## Running All Tests
+
+To run all the tests in your project, execute the following command:
+
+```bash
+npm test
+```
 
 ## External Dependencies
 
 This project relies on the following external dependencies:
 
 - React: Used as the core library for building the user interface.
+- Vite: Used to install React
 - React Router: Used for client-side routing.
+- React Testing Library & Jest: Used for testing.
 - Ant Design: Provides UI components for the application.
 - express.js framwrok for backend API's
 
